@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+/* Thin vertical scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+/* Thin vertical scrollbar */
+body {
+  scrollbar-width: thin;
+}
+
+/* Track */
+body {
+  scrollbar-color: #f1f1f1 #888;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
