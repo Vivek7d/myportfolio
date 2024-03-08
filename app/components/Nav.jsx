@@ -51,7 +51,7 @@ export default function Nav() {
           {Links.map((link) => (
             <li
               key={link.name}
-              className="md:ml-8 md:my-0 my-7 text-xl hover:text-[#0ea5e9] cu"
+              className="md:ml-8 md:my-0 my-7 text-xl cursor-pointer hover:text-[#0ea5e9] cu"
             >
               <Link
                 to={link.link}
