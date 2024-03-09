@@ -57,7 +57,7 @@ const Projects = () => {
       {projectDetail.map((project) => (
         <div
           key={project.id}
-          className="pt-20 p-5 md:p-0 md:pt-20 md:flex items-center"
+          className="pt-20 p-5 md:p-0 md:pt-20  lg:flex items-center"
         >
           <Image
             data-aos="fade-down"
@@ -65,11 +65,12 @@ const Projects = () => {
             alt="My Image"
             width={900}
             height={500}
-            className="pl-0 md:pl-52 rounded-xl"
+            objectFit="cover"
+            className="pl-0 md:px-20 lg:px-0 lg:pl-52 rounded-xl"
           />
           <div
             data-aos="fade-down"
-            className="p-9  md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9"
+            className="p-9 md:pt-9  md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9"
           >
             <div className={myFont2.className}>
               <h1 className="font-bold text-2xl md:text-4xl ">
