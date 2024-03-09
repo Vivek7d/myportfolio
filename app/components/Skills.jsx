@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import localFont from "next/font/local";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 const myFont2 = localFont({ src: "../fonts/Satoshi-Medium.otf" });
@@ -29,12 +31,25 @@ const Skills = () => {
 };
 
 const SkillCard = ({ icon, name }) => {
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      offset: 300, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000,
+    });
+  }, []);
   return (
-    <div className="m-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col items-center">
-      <div className="w-24 h-24 mb-4 flex items-center justify-center">
+    <div data-aos="fade-up" className="m-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col items-center">
+      <div
+        
+        className="w-24 h-24 mb-4 flex items-center justify-center"
+      >
         <Image src={icon} alt="html" width={55} height={55} />
       </div>
-      <p className="text-md text-gray-500 font-semibold dark:text-gray-300">
+      <p
+        className="text-md text-gray-500 font-semibold dark:text-gray-300"
+      >
         <span className={myFont2.className}>{name}</span>
       </p>
     </div>

@@ -1,18 +1,11 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import localFont from "next/font/local";
-import {
-  FaCss3Alt,
-  FaExternalLinkAlt,
-  FaGitAlt,
-  FaGithub,
-  FaHtml5,
-  FaReact,
-} from "react-icons/fa";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
-import { IoLogoFirebase, IoLogoJavascript } from "react-icons/io5";
-import { TbBrandNextjs } from "react-icons/tb";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const myFont2 = localFont({ src: "../fonts/Satoshi-Medium.otf" });
 const Projects = () => {
@@ -43,6 +36,15 @@ const Projects = () => {
       live: "https://usability-clone-vsd.vercel.app/",
     },
   ];
+
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      offset: 300, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000,
+    });
+  }, []);
   return (
     <div
       id="projects"
@@ -58,13 +60,17 @@ const Projects = () => {
           className="pt-20 p-5 md:p-0 md:pt-20 md:flex items-center"
         >
           <Image
+            data-aos="fade-down"
             src={project.src}
             alt="My Image"
             width={900}
             height={500}
             className="pl-0 md:pl-52 rounded-xl"
           />
-          <div className="p-9  md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9">
+          <div
+            data-aos="fade-down"
+            className="p-9  md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9"
+          >
             <div className={myFont2.className}>
               <h1 className="font-bold text-2xl md:text-4xl ">
                 {project.name}

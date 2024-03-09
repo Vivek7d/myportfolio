@@ -1,9 +1,20 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import localFont from "next/font/local";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const myFont2 = localFont({ src: "../fonts/Satoshi-Medium.otf" });
 const Aboutme = () => {
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      offset: 300, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000,
+    });
+  }, []);
   return (
     <div
       id="about-me"
@@ -19,10 +30,13 @@ const Aboutme = () => {
           alt="My Image"
           width={900}
           height={500}
-          unoptimized
+          data-aos="fade-down"
           className="pl-0 md:pl-52 rounded-md"
         />
-        <div className="p-9 md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9">
+        <div
+          data-aos="fade-up"
+          className="p-9 md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9"
+        >
           <h1 className={myFont2.className}>
             {" "}
             Hello there! I'm Vivek S. Dhalkari , a Passionate{" "}
