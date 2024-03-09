@@ -6,9 +6,12 @@ import { useTheme } from "next-themes";
 
 export default function Themebtn() {
   const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme, setDefaultTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setDefaultTheme('light'); // Set default theme to light
+  }, []);
 
   if (!mounted) return null;
 
