@@ -11,7 +11,7 @@ const myFont2 = localFont({ src: "../fonts/Satoshi-Medium.otf" });
 
 const Hero = () => {
   return (
-    <div id="/" className="flex items-center justify-center pt-72">
+    <div id="/" className="flex items-center justify-center pt-64 md:pt-72">
       <div className=" space-y-7 text-center">
         <h1 className={myFont1.className}>
           <span className="text-4xl text-gray-800 dark:text-white  md:text-6xl">

@@ -55,7 +55,7 @@ const Projects = () => {
       {projectDetail.map((project) => (
         <div
           key={project.id}
-          className="pt-20 p-3 md:p-0 md:pt-20 md:flex items-center"
+          className="pt-20 p-5 md:p-0 md:pt-20 md:flex items-center"
         >
           <Image
             src={project.src}

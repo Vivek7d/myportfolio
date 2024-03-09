@@ -37,7 +37,18 @@ export default function Nav() {
     <div className="shadow-md w-full fixed top-0 left-0 ">
       <div className="md:flex items-center justify-between dark:bg-gray-900 bg-white py-4 md:px-10 px-7">
         <div className="font-bold text-2xl  cursor-pointer flex dark:text-white items-center text-gray-800">
-          <h1 className={myFont1.className}>Vivek Dhalkari</h1>{" "}
+          <h1 className={myFont1.className}>
+            <Link
+              to="/"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className={myFont2.className}
+            >
+              Vivek Dhalkari
+            </Link>
+          </h1>{" "}
           <div className="md:hidden pl-16 pt-1 flex items-center justify-center">
             <Themebtn className=" h-5 w-5" />
           </div>
