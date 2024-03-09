@@ -11,7 +11,6 @@ const Aboutme = () => {
     // Initialize AOS when the component mounts
     AOS.init({
       offset: 300, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
       duration: 1000,
     });
   }, []);
@@ -31,7 +30,7 @@ const Aboutme = () => {
           width={900}
           height={500}
           data-aos="fade-down"
-          className="pl-0 md:pl-24 lg:pl-52  rounded-md"
+          className="pl-0 md:p-20 lg:pt-9 lg:pr-0 lg:pl-52  rounded-md"
         />
         <div
           data-aos="fade-up"
@@ -49,7 +48,7 @@ const Aboutme = () => {
             <br />
             <div className="pt-4"></div>
             My expertise lies in leveraging technologies like{" "}
-            <span className="font-bold text-[#047857]">
+            <span className="font-bold dark:text-[#10b981] text-[#047857]">
               {" "}
               React.js, Next.js, and Firebase
             </span>{" "}

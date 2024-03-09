@@ -15,7 +15,10 @@ const Hero = () => {
       <div className=" space-y-7 text-center">
         <h1 className={myFont1.className}>
           <span className="text-4xl text-gray-800 dark:text-white md:text-4xl lg:text-6xl">
-            Hey, I'm <span className="font-bold text-[#0d9488]">Vivek!</span>
+            Hey, I'm{" "}
+            <span className="font-bold dark:text-[#34d399] text-[#0d9488]">
+              Vivek!
+            </span>
           </span>
         </h1>
         <p className=" text-xl max-w-lg lg:max-w-screen-md dark:text-white text-gray-500 px-4 lg:text-2xl">

@@ -24,7 +24,7 @@ export default function SMedia() {
             height={35}
             className="hover:w-14 hover:h-14 hover:transition-all hover:ease-out hover:duration-100"
           />
-          {/* <FaGithub  /> */}
+        
         </Link>
       </button>
       <button class="bg-[#0d9488] hover:bg-[#0891b2] text-white font-bold py-3 px-5 rounded-full">
