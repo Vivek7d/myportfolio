@@ -19,9 +19,10 @@ const Aboutme = () => {
           alt="My Image"
           width={900}
           height={500}
+          unoptimized
           className="pl-0 md:pl-52"
         />
-        <div className="p-9 md:p-28 text-justify text-gray-800 text-xl md:text-left  md:leading-9">
+        <div className="p-9 md:p-28 text-justify dark:text-white text-gray-800 text-xl md:text-left  md:leading-9">
           <h1 className={myFont2.className}>
             {" "}
             Hello there! I'm Vivek S. Dhalkari , a Passionate{" "}
